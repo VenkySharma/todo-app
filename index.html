@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rust ToDo App 🚀</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/todo-app/app-41b7609aaa583a31.css" integrity="sha384-6uSQW3h0KnjTZpKJ54YG2Cye/d8U4UiEsSkGWCjhXnjo+iJGoe8NxSgwx6CwUvf2"/>
+    <!-- PWA Ready (optional but good) -->
+    <meta name="theme-color" content="#4CAF50" />
+<link rel="modulepreload" href="/todo-app/todo-app-12bf6214477fe943.js" crossorigin="anonymous" integrity="sha384-Od1zz2+10Eq64EeuY/QiQEl2pydE2gU93+kuHDkTVPjjrFCz10ty/LzljlKrDNKv"><link rel="preload" href="/todo-app/todo-app-12bf6214477fe943_bg.wasm" crossorigin="anonymous" integrity="sha384-fgxb398KoTdVTt1FGcIZc2itNoaDvOY3B64Hv/AhCpqa9gkG99CX+ZcJyboqoh+G" as="fetch" type="application/wasm"></head>
+<body>
+
+    <!-- Root -->
+    <div id="root"></div>
+
+    <!-- Trunk will inject WASM here -->
+
+<script type="module">
+import init, * as bindings from '/todo-app/todo-app-12bf6214477fe943.js';
+const wasm = await init({ module_or_path: '/todo-app/todo-app-12bf6214477fe943_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
